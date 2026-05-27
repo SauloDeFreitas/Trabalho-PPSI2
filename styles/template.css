@@ -8,6 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root{
@@ -44,7 +45,7 @@ html{
     color: white;
 }
 
-#conteudoPrincipal{
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,14 +117,36 @@ footer{
 }
 
 #fotoEmpresa{
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    align-self: end;
 }
 
+#apresentacaoEmpresa p{
+    width: 40%;
+}
 #apresentacaoEmpresa{
     display: flex;
+    flex-direction: column;
     background-color: var(--bases);
     margin-bottom: 30px;
     width: 100%;
     color: white;
+    padding: 2.5% 5% 2.5% 5%;
 }
+
+#apresentacaoEmpresa div{
+    display: flex;
+}
+
+#conteudoContato{
+    background-color: var(--bases);
+    width: 40%;
+    height: 500px;
+    color: white;
+}
+
+#conteudoContato section form{
+    display: flex;
+    flex-direction: column;
+}
+
