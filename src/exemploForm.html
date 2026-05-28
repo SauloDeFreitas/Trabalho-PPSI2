@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form contato whatsapp</title>
+    <style>
+
+        * {
+                font-size: 1.2rem;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+
+        }
+        fieldset {
+            width: 300px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+        }
+        button {
+            padding: 1em;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="https://wa.me/5511999999999" id="contato-whatsapp">
+        <fieldset>
+            <legend>Contato</legend>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" required>
+
+            <label for="categoria">Categoria</label>
+            <select id="categoria" required>
+                <option>Selecione uma categoria</option>    
+                <option value="suporte">Suporte</option>
+                <option value="cotacao">Cotação</option>
+            </select>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" required></textarea>
+        </fieldset>
+
+
+        <input type="hidden" name="text" value="" id="mensagem-completa" >
+        <button type="button" onclick="enviarMensagem()">Enviar mensagem</button>
+
+    </form>
+
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>
