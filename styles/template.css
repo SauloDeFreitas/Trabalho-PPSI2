@@ -1,6 +1,6 @@
 /* Cores projeto
     fundo -> #E2E8F0
-    bases -> #0D1117
+    bases -> #111827
     destaques -> #d10e1e
 */
 
@@ -12,19 +12,20 @@
 }
 
 :root{
-    --background:#E2E8F0;
-    --bases: #0D1117;
+    --background:#F1F5F9;
+    --basePadrao: #111827;
+    --bases: #111827;
     --destaques: #d10e1e;
 }
 
-/* Padronização Formatação*/
-
-h1{
-    font-size: 32px;
-}
+/*Proporção de tipografia*/
 
 p{
-    font-size: 16px;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 34px;
 }
 
 html{
@@ -33,8 +34,7 @@ html{
 }
 
 #barraNavegacao{
-    background-color: var(--bases);
-    margin: 0;
+    background-color: var(--basePadrao);
     position:fixed;
     top: 0;
     left: 0;
@@ -44,19 +44,33 @@ html{
     justify-content: space-around;
     align-items: center;
 
-    & a {
-        text-decoration: none;
+    & ul{
+        display: flex;
+        color: transparent;
+        width: 80%;
+        justify-content: space-around;
+    }
+    & button{
+        border: none;
+        background-color: var(--destaques);
+        width: 180px;
+        height: 60px;
+        font-size: 18px;
+        border-radius:30px;
+        color: white;
+    }
+
+    & img{
+        width: 300px;
+    }
+
+    & input{
+        display: none;
     }
 }
 
-#barraNavegacao button{
-    border: none;
-    background-color: var(--destaques);
-    width: 180px;
-    height: 60px;
-    font-size: 18px;
-    border-radius:30px;
-    color: white;
+#barraNavegacao a{
+    text-decoration: none;
 }
 
 main{
@@ -82,25 +96,20 @@ body{
     align-items: center;
 }
 
-#barraNavegacao img{
-    width: 250px;
-    height: 250px;
-}
-
 #galeriaServicos a img{
     width: 300px;
     height: 200px;
 }
 
 footer{
-    text-align: center;
-    background-color: var(--bases);
+    background-color: var(--basePadrao);
     width: 100%;
     height: 100px;
     color: white;
     margin-top: 10px;
     display: flex;
     align-items: center;
+    text-align: center;
 
     & p{
         width: 100%;
@@ -137,7 +146,6 @@ footer{
 
 #fotoEmpresa{
     width: 50%;
-    align-self: end;
 }
 
 #apresentacaoEmpresa p{
@@ -145,12 +153,21 @@ footer{
 }
 #apresentacaoEmpresa{
     display: flex;
-    flex-direction: column;
     background-color: var(--bases);
     margin-bottom: 30px;
     width: 100%;
     color: white;
     padding: 2.5% 5% 2.5% 5%;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    & div p {
+        width: 95%;
+        height: 100%;
+    }
 }
 
 #apresentacaoEmpresa div{
@@ -160,19 +177,23 @@ footer{
 #conteudoContato{
     width: 80%;
     height: 500px;
+    color: black;
 
     & section{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    & section form{
-        width: 50%;
+        width: 80%;
+        padding: 20px;
     }
 
-    & section form input{
-        margin-bottom: 5%;
+    & section form :nth-child(odd){
+        margin: 50px 0 50px 0;
+    }
+
+    & section form button{
+        width: 35%;
+        align-self: end;
+        background-color: var(--destaques);
+        color: white;
+        
     }
 }
 
@@ -182,14 +203,15 @@ footer{
 }
 
 @media  (max-width:1030px) {
-    #barraNavegacao{
-        flex-direction: column;
+    #barraNavegacao {
+        flex-direction: column; 
         height: auto;
+        min-height: 250px;
 
         & input{
             display: inline-block;
             width: 50px;
-            height: 50px;
+            height: 50px; 
             appearance: none;
             background-image: url('../imgs/down-arrow.webp');
             background-size: 100%;
@@ -215,6 +237,9 @@ footer{
             display: flex;
             flex-direction: column;
         }
+        & img{
+            width: 200px;
+        }
     }
 
     main{
@@ -231,25 +256,3 @@ footer{
     }
 }
 
-#galeriaProdutos{
-    display: flex;
-    flex-wrap:  wrap;
-    justify-content: center;
-    width: 100%;
-
-    & a:hover {
-        opacity: 90%;
-        background-color: black;
-    }
-
-    & button{
-        border: none;
-        width: 250px;
-        height: 250px;
-        background-size: 250px;
-    }
-
-    & :nth-child(1){
-       background-image: url("../imgs/Armazenamento/Samsung T7 Shield.png");
-    }
-}
