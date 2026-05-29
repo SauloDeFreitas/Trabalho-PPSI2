@@ -256,3 +256,13 @@ footer{
     }
 }
 
+#GaleriaAcessorios{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   background-color: blue;
+    & img{
+        width: 200px;
+        height: 200px; 
+    }
+}
