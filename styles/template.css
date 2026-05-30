@@ -82,7 +82,7 @@ main{
 
 
 #galeriaServicos{
-    background-color: var(--bases);
+    
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +112,11 @@ footer{
     text-align: center;
 
     & p{
-        width: 100%;
+        width: 70%;
+    }
+
+    & a{
+        width: 20%;
     }
 }
 
@@ -256,13 +260,56 @@ footer{
     }
 }
 
-#GaleriaAcessorios{
-   display: flex;
-   justify-content: space-around;
-   width: 100%;
-   background-color: blue;
-    & img{
-        width: 200px;
-        height: 200px; 
+#conteudoProdutos {
+    width: 100%;
+
+    & div{
+        display: flex;
+        flex-wrap: wrap;
     }
+    & section{
+        width: 90%;
+    }
+    & h1{
+        margin: 5% 0 5% 0;
+    }
+}
+
+#GaleriaAcessorios #GaleriaArmazenamento #GalariaCaixasSom{
+   display: flex;
+   justify-content: space-between;
+}
+
+#conteudoProdutos div img{
+    width: 200px;
+    height: 200px;    
+}
+
+
+#conteudoProdutos div div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px lightgray;
+    margin: 0 2% 0 0;
+    
+
+    & button{
+        margin-top: 2%;
+        height: 30px;
+        width: 80%;
+        align-self: center;
+        border-radius: 10px;
+        border: solid 1px lightblue;
+        background-color: transparent;
+
+    }
+}
+
+.iconesFooter{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
