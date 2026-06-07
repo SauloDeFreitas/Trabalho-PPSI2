@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/template.css">
+        <title>Contato</title>
+    </head>
+<body>
+    <nav id="barraNavegacao">
+        <img alt="logotipo da empresa" src="../imgs/logo.webp">
+        <input type="checkbox">
+        <ul>
+            <li><a href="index.html"><button>Home</button></a></li>
+            <li><a href="servicos.html"><button>Serviços</button></a></li>
+            <li><a href="produtos.html"><button>Produtos</button></a></li>
+            <li><a href="contato.html"><button>Contato</button></a></li>
+        </ul>
+    </nav>
+    <main id="conteudoContato" id="contato-whatsapp">
+        <section>
+            <h1>Contato</h1>
+            <form action="https://wa.me/5511999999999" id="contato-whatsapp">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" required>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" type="text" required></textarea>
+                <input type="hidden" name="text" value="" id="mensagem-completa" >
+                <button type="button" onclick="enviarMensagem()">Enviar mensagem</button>
+            </form>
+        </section>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <p>NexTec - 2026</p>
+        <p>Rua dos Girassóis Azuis, nº 142</p>
+        <a role="button" href="mailto:nextTec@mail.com">Botão Email Link<img class="iconesFooter" src="../imgs/mail.webp"  alt="imagem link email"></a>
+        <a role="button" href="https://wa.me/5511999999999">Botão Whatsapp Link<img class="iconesFooter" src="../imgs/whatsapp.webp" alt="imagem link whatsapp"></a>
+        <a role="button" href="tel:+551199999999999">Botão Telefone Link<img class="iconesFooter" src="../imgs/phone-call.webp" alt="imagem link telefone"></a>
+    </footer>
+</body>
+</html>
