@@ -1,0 +1,421 @@
+/* Cores projeto
+    fundo -> #E2E8F0
+    bases -> #111827
+    destaques -> #d10e1e
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background:#F1F5F9;
+    --basePadrao: #111827;
+    --bases: #111827;
+    --destaques: #d10e1e;
+}
+
+/*Proporção de tipografia*/
+
+p{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 34px;
+}
+
+html{
+    background-color: var(--background);
+    height: 100vh;
+}
+
+#barraNavegacao{
+    background-color: var(--basePadrao);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & ul{
+        display: flex;
+        color: transparent;
+        width: 80%;
+        justify-content: space-around;
+    }
+    & a{
+        border: none;
+        background-color: var(--destaques);
+        padding: 25px 40px 25px 40px;
+        font-size: 18px;
+        border-radius:10px;
+        color: white;
+    }
+
+    & img{
+        width: 300px;
+    }
+
+    & input{
+        display: none;
+    }
+}
+
+#barraNavegacao a{
+    text-decoration: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+
+#galeriaServicos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.5%;
+    & a{
+
+        color: transparent;
+        width: 500px;
+        height: 250px;
+        margin: 10px;
+        background-image: url('../imgs/galeriaSprite.webp');
+    }
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+footer{
+    background-color: var(--basePadrao);
+    width: 100%;
+    height: 100px;
+    color: white;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    & p {
+        padding: 40px;
+    }
+    & a{
+        padding: 40px;
+        font-size: 0px;
+    }
+}
+
+#galeriaServicos :nth-child(2){
+    background-position: 500px 0;
+}
+
+#galeriaServicos :nth-child(3){
+    background-position: 0 -255px;
+}
+
+#galeriaServicos :nth-child(4){
+    background-position: 495px -250px;
+}
+
+#galeriaServicos :nth-child(5){
+    background-position: 8px -506px;
+}
+
+#galeriaServicos :nth-child(6){
+    background-position: 495px -506px;
+}
+
+#fotoEmpresa{
+    width: 50%;
+}
+
+#mainServicos{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-bottom: 15%;
+    justify-content: center;
+    height: 100%;
+}
+
+#apresentacaoEmpresa{
+    display: flex;
+    background-color: var(--bases);
+    margin-bottom: 30px;
+    width: 100%;
+    color: white;
+    padding: 2.5% 5% 2.5% 5%;
+    justify-content: center;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-right: 8%;
+        height: auto;
+        width: 30%;
+        text-align: justify;
+        line-height: 150%;
+    }
+    & div h1{
+        margin-bottom: 25px;
+    }
+}
+
+
+#conteudoContato{
+    width: 60%;
+    height: 500px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-bottom: 4%;
+
+    & section{
+        width: 80%;
+        padding: 20px;
+    }
+
+    & section form :nth-child(odd){
+        margin: 50px 0 50px 0;
+    }
+
+    & section form button{
+        width: 35%;
+        align-self: end;
+        background-color: var(--destaques);
+        color: white;
+        
+    }
+}
+
+#conteudoContato section form{
+    display: flex;
+    flex-direction: column;
+
+    & button{
+        margin-top: 20px;
+        padding: 15px;
+        width: 160px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+}
+
+@media  (max-width:1030px) {
+    #barraNavegacao {
+        flex-direction: column; 
+        height: auto;
+        min-height: 250px;
+
+        & input{
+            display: inline-block;
+            
+            width: 50px;
+            height: 50px; 
+            appearance: none;
+            background-image: url('../imgs/down-arrow.webp');
+            background-size: 100%;
+        }
+
+        & a{
+            width: 100%;
+            display: flex;
+            background-color: transparent;
+            justify-content: center;
+        }
+
+        & ul{
+            display: none;
+        }
+
+        & input:checked ~ ul{
+            display: flex;
+            flex-direction: column;
+        }
+        & img{
+            width: 200px;
+        }
+    }
+
+    main{
+        margin-top: 300px;
+    }
+
+    #apresentacaoEmpresa{
+        flex-wrap: wrap;
+        align-items: center;
+        
+        & img{
+            width: 500px;
+            align-self: end;
+        }
+
+        & p, h1{
+            width: 400px;
+            align-self: center;
+        }
+    }
+
+    #mainServicos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #GaleriaAcessorios h1{
+        text-align: center;
+    }
+
+    #GaleriaArmazenamento h1{
+        text-align: center;
+    }
+
+    #GaleriaCaixasSom h1{
+        text-align: center;
+    }
+}
+
+@media (max-width:940px){
+    footer{
+        height: 500px;
+        flex-direction: column;
+    }
+
+    #mainServicos{
+        & img{
+            display: none;
+        }
+
+        & form{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:540px){
+    footer{
+        height: 600px;
+    }
+}
+
+#conteudoProdutos {
+
+    & div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    & section{
+        width: 90%;
+    }
+    & h1{
+        margin: 2% 0 2% 2%;
+        width: 100%;
+    }
+}
+
+#GaleriaAcessorios #GaleriaArmazenamento #GalariaCaixasSom{
+   display: flex;
+   justify-content: space-between;
+}
+
+#conteudoProdutos div img{
+    width: 200px;
+    height: 200px;    
+}
+
+
+#conteudoProdutos section div div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px lightgray;
+    margin: 0 2% 0 0;
+    
+
+    & a{
+        margin-top: 2%;
+        height: 30px;
+        width: 80%;
+        align-self: center;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border: solid 1px lightblue;
+        background-color: transparent;
+
+    }
+}
+
+.iconesFooter{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#imagemServicos{
+    width: 700px;
+    margin-right: 10%;
+}
+
+#formularioServicos{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    & :nth-child(odd){
+        margin-bottom: 5%;
+    }
+
+    & button{
+        width: 30%;
+        align-self: end;
+        padding: 8px;
+        background-color: var(--destaques);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}
+
+#selecaoServico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & input, label{
+        margin-left: 2%;
+        margin-right: 2%;
+        text-align: center;
+    }
+}
+
+#labelNav{
+    color: transparent;
+    font-size: 0px;
+}

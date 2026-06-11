@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Serviços</title>
+        <link rel="stylesheet" href="../styles/template.css">
+    </head>
+    <body>
+       <nav id="barraNavegacao">
+            <img alt="logotipo da empresa" src="../imgs/logo.webp">
+            <label id="labelNav" for="botaoBarraNav">Botão para uso de navegacao de dispositivos mobile</label>
+            <input id="botaoBarraNav" aria-pressed="false" role="button" type="checkbox">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <main id="mainServicos">
+            <img  alt="Imagem de uma mulher consertando dispositivo eletronico" id="imagemServicos" src="../imgs/Servicos_Prestados/Assistencia Tecnica.webp">
+            <form id="formularioServicos">
+                <h1>Defina o Serviço</h1>
+                <label for="nomeCliente">Seu Nome</label>
+                <input id="nomeCliente">
+
+                <fieldset id="selecaoServico">
+                    <legend>Tipo Do Aparelho</legend>
+                    <label>
+                        Celular
+                        <input id="celular" name="escolha" type="radio">
+                    </label>
+
+                    <label>
+                        Notebook
+                        <input id="notebook" name="escolha" type="radio">
+                    </label>
+
+                    <label>
+                        Computador
+                        <input id="computador" name="escolha" type="radio">
+                    </label>
+                </fieldset>
+
+                <label for="tipoServico">Tipo Do Serviço</label>
+                <input id="tipoServico">
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer>
+            <p>NexTec - 2026</p>
+            <p>Rua dos Girassóis Azuis, nº 142</p>
+            <a role="button" href="mailto:nextTec@mail.com">Botão Email Link<img class="iconesFooter" src="../imgs/mail.webp"  alt="imagem link email"></a>
+            <a role="button" href="https://wa.me/5511999999999">Botão Whatsapp Link<img class="iconesFooter" src="../imgs/whatsapp.webp" alt="imagem link whatsapp"></a>
+            <a role="button" href="tel:+551199999999999">Botão Telefone Link<img class="iconesFooter" src="../imgs/phone-call.webp" alt="imagem link telefone"></a>
+        </footer>
+    </body>
+</html>
